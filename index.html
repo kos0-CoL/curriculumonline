@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de inicio sencilla y limpia con elementos modales y banners de Google AdSense">
+    <title>Página de Inicio</title>
+    
+</head>
+<body>
+
+    <header>
+        <h1>Mi curriculum Online</h1>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Curriculum Simplre</h2>
+            <p>Aqui pordras crear tu Curriculum, simple.</p>
+            <button class="btn" onclick="openModal()">Crea tu Curriculum</button>
+        </div>
+
+        <!-- Banner de Google AdSense (Reemplazar por tu código de AdSense) -->
+        <div class="adsense">
+            <!-- AdSense Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXX" 
+                 data-ad-slot="XXXXXXX" 
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">                
+            
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="container">
+                    <h2>Formulario para Generar Currículum en PDF</h2>
+                    <form id="cvForm" onsubmit="generatePDF(event)">
+                        <label for="photo">Foto</label>
+                        <input type="file" id="photo" accept="image/*">
+            
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+            
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" placeholder="Ingresa tu apellido" required>
+            
+                        <label for="edad">Edad</label>
+                        <input type="number" id="edad" placeholder="Ingresa tu edad" required>
+            
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" placeholder="Ingresa tu teléfono" required>
+            
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" id="correo" placeholder="Ingresa tu correo electrónico" required>
+            
+                        <label for="experiencia">Experiencia Laboral</label>
+                        <textarea id="experiencia" rows="4" placeholder="Describe tu experiencia laboral" required></textarea>
+            
+                        <label for="estudios">Estudios</label>
+                        <textarea id="estudios" rows="4" placeholder="Describe tus estudios" required></textarea>
+            
+                        <label for="aptitudes">Aptitudes</label>
+                        <textarea id="aptitudes" rows="3" placeholder="Lista tus aptitudes" required></textarea>
+            
+                        <label for="idiomas">Idiomas</label>
+                        <textarea id="idiomas" rows="3" placeholder="Lista tus idiomas (opcional)"></textarea>
+            
+                        <label for="referencias">Referencias</label>
+                        <textarea id="referencias" rows="3" placeholder="Incluye tus referencias (opcional)"></textarea>
+            
+                        
+                        <input type="submit" class="btn" value="Generar Curriculum">
+                    </form>
+                </div>
+            
+                <!-- Librería jsPDF para generar el PDF -->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+                <script src="script.js"></script>
+            
+              
+                <button class="btn" onclick="closeModal()">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Segundo Banner de AdSense -->
+        <div class="adsense">
+            <!-- AdSense Banner -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXX" 
+                 data-ad-slot="XXXXXXX" 
+                 data-ad-format="auto"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+    <!-- Scripts para abrir y cerrar el modal -->
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+
+        // Cierra el modal al hacer clic fuera del contenido
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('myModal')) {
+                document.getElementById('myModal').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+          
+          <!-- Logo y descripción -->
+          <div class="footer-section">
+            <h2 class="footer-logo">CurriculumPro</h2>
+            <p>Facilitamos la creación de currículums profesionales en minutos. Dale vida a tus datos profesionales con plantilla simple y eficiente.</p>
+          </div>
+          
+          <!-- Enlaces útiles -->
+          <div class="footer-section">
+            <h3>Enlaces útiles</h3>
+            <ul>
+              <li><a href="#">Cómo funciona</a></li>
+              <li><a href="#">Plantillas de CV</a></li>
+            </ul>
+          </div>
+  
+          <!-- Información de contacto -->
+          <div class="footer-section">
+            <h3>Contáctanos</h3>
+            <p>Email: <a href="mailto:contacto@curriculumpro.com">contacto@curriculumpro.com</a></p>
+          </div>
+  
+          <!-- Redes sociales -->
+          <div class="footer-section">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+              <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+              </a>
+              <a href="https://www.twitter.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+              </a>
+              <a href="https://www.linkedin.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+              </a>
+              <a href="https://www.instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Derechos de autor -->
+        <div class="footer-copyright">
+          <p>&copy; 2024 Curriculum. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+</html>
