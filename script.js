@@ -80,3 +80,4 @@ function generatePDF(e) {
         alert("Por favor, sube una foto para incluirla en el CV.");
     }
 }
+<a href="https://www.freecounterstat.com" title="free stat counter"><img src="https://counter6.optistats.ovh/private/freecounterstat.php?c=yrute7h246q643l3qfukwug6b8za7dh1" border="0" title="free stat counter" alt="free stat counter"></a>
